@@ -4,16 +4,16 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        AudioPlayer audioPlayer = new AudioPlayer();
+        new AudioPlayer();
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Podaj tekst do odczytania: ");
         scanner.useDelimiter("\\n");
         String text = scanner.next();
 
-        String[] splittedText = text.split("\\s+");
+        String[] splitText = text.split("\\s+");
 
-        for(String audioMessage : splittedText) {
+        for(String audioMessage : splitText) {
             AudioPlayer.findAudio(audioMessage);
         }
     }

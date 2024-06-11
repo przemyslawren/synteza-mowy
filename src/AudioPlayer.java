@@ -39,6 +39,8 @@ public class AudioPlayer extends JFrame {
                 playNext();
             });
             mediaPlayer.play();
+        } else if (players.isEmpty()) {
+            System.exit(0);
         }
     }
 
